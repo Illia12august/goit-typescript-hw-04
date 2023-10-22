@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export function FormComponent() {
   const [value, setValue] = useState("");
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
   };
 
@@ -11,3 +11,5 @@ export function FormComponent() {
     <input type="text" value={value} onChange={handleChange} />
   );
 }
+
+// ⦁	React.ChangeEvent — це тип для подій змін, що відбуваються, коли стан елемента форми змінюється. Він часто використовується з <HTMLInputElement>, <HTMLSelectElement> та <HTMLTextAreaElement>.

@@ -1,4 +1,16 @@
 import React, {useReducer} from "react";
+// import { Interface } from "readline";
+
+type requestStep = 'start'| 'pending'| 'finished'| 'idle' ;
+
+type State = {
+  isRequestInProgress: boolean,
+  requestStep: requestStep,
+}
+
+type Action = {
+  type: string,
+}
 
 const initialState: State = {
   isRequestInProgress: false,
